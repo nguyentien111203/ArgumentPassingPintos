@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Pintos Debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/userprog/build/kernel.elf", // đường dẫn file ELF
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb", // Đường dẫn tới GDB
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          },
+          {
+            "description": "Set architecture",
+            "text": "set architecture i386:x86-32",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "",
+        "sourceFileMap": {
+          "/home/vagrant/pintos/src": "${workspaceFolder}"
+        }
+      }
+    ]
+  }
+  
